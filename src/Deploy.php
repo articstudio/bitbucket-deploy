@@ -6,7 +6,7 @@ use Articstudio\Bitbucket\ContainerAwareTrait;
 use Pimple\Container;
 use Articstudio\Bitbucket\Change;
 use Articstudio\Bitbucket\Exception\Deploy\NotFoundException;
-use Articstudio\Bitbucket\System\Directory;
+use Articstudio\Bitbucket\System\Filesystem\Directory;
 use RuntimeException;
 use Monolog\Logger;
 use Monolog\Handler\NativeMailerHandler;

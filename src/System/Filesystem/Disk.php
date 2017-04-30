@@ -1,6 +1,6 @@
 <?php
 
-namespace Articstudio\Bitbucket\System;
+namespace Articstudio\Bitbucket\System\Filesystem;
 
 class Disk {
 
