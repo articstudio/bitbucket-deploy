@@ -1,6 +1,24 @@
+# COMPOSER
+composer.lock
 composer.phar
-/vendor/
+/vendor
 
-# Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
-# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-# composer.lock
+# IDE
+/nbproject
+
+# Logs
+/logs
+!/logs/.gitkeep
+
+# Repositories
+/repositories
+!/repositories/.gitkeep
+
+# App
+#/app
+!/app/.gitkeep
+!/app/ExampleCustomMiddleware.php
+!/app/ExampleCustomProvider.php
+
+# Config
+/config/app.php
