@@ -7,11 +7,11 @@ composer.phar
 /nbproject
 
 # Logs
-/logs
+/logs/*
 !/logs/.gitkeep
 
 # Repositories
-/repositories
+/repositories/*
 !/repositories/.gitkeep
 
 # App

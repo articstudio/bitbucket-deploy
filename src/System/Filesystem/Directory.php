@@ -1,10 +1,9 @@
 <?php
 
-namespace Articstudio\Bitbucket\System;
+namespace Articstudio\Bitbucket\System\Filesystem;
 
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
-use SplFileInfo;
 
 class Directory {
 
