@@ -1,0 +1,25 @@
+{
+    "name": "articstudio/bitbucket-deploy",
+    "description": "Simple bitbucket deploy using webhooks",
+    "homepage": "https://github.com/articstudio/bitbucket-deploy",
+    "type": "project",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Marc",
+            "email": "marc@articstudio.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Articstudio\\Bitbucket\\": "src/",
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "monolog/monolog": "^1.22",
+        "pimple/pimple": "^3.0",
+        "guzzlehttp/psr7": "^1.4",
+        "psr/container": "^1.0"
+    }
+}
