@@ -4,7 +4,7 @@ namespace Articstudio\Bitbucket\Middleware;
 
 use Articstudio\Bitbucket\Contract\Middleware as MiddlewareContract;
 use Articstudio\Bitbucket\ContainerAwareTrait;
-use Pimple\Container;
+use Articstudio\Bitbucket\Container;
 
 abstract class AbstractMiddleware implements MiddlewareContract {
 

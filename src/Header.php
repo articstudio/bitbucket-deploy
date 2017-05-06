@@ -3,7 +3,7 @@
 namespace Articstudio\Bitbucket;
 
 use Articstudio\Bitbucket\Collection;
-use DomainException;
+use Articstudio\Bitbucket\Exception\Middleware\InvalidHeaderException;
 
 class Header extends Collection {
 
@@ -12,10 +12,10 @@ class Header extends Collection {
 
     public function validate() {
         if ($this->get('event') !== self::EVENT_PUSH) {
-            throw new DomainException(sprintf('Invalid event "%s"', $this->get('event')));
+            throw new InvalidHeaderException(sprintf('Invalid event "%s"', $this->get('event')));
         }
         if ($this->get('user_agent') !== self::USER_AGENT) {
-            throw new DomainException(sprintf('Invalid User Agent "%s"', $this->get('user_agent')));
+            throw new InvalidHeaderException(sprintf('Invalid User Agent "%s"', $this->get('user_agent')));
         }
     }
 

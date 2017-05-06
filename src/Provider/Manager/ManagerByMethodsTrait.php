@@ -2,7 +2,7 @@
 
 namespace Articstudio\Bitbucket\Provider\Manager;
 
-use Pimple\Container;
+use Articstudio\Bitbucket\Container;
 
 trait ManagerByMethodsTrait {
 
@@ -13,7 +13,7 @@ trait ManagerByMethodsTrait {
     }
 
     public function register(Container $container) {
-        if (!isset($this->methods) || !is_array($this->methods)) {
+        if (empty($this->methods) || !is_array($this->methods)) {
             return;
         }
         foreach ($this->methods AS $alias => $method) {

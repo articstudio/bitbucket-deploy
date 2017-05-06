@@ -8,10 +8,13 @@ use Articstudio\Bitbucket\Exception\Container\NotFoundException;
 use Articstudio\Bitbucket\Exception\Container\Exception as ContainerException;
 use Articstudio\Bitbucket\Collection;
 use Articstudio\Bitbucket\Provider\AppProvider;
+use Articstudio\Bitbucket\Exception\TrowByTrait;
+use Exception;
+use InvalidArgumentException;
 
 class Container extends PimpleContainer implements ContainerContract {
 
-    use Exception\ParentCatchTrait;
+    use TrowByTrait;
 
     public function __construct(array $values = array()) {
         parent::__construct($values);
@@ -31,8 +34,8 @@ class Container extends PimpleContainer implements ContainerContract {
         }
         try {
             return $this->offsetGet($id);
-        } catch (\InvalidArgumentException $exception) {
-            if ($this->isParentException($exception, 'offsetGet')) {
+        } catch (Exception $exception) {
+            if ($this->thrownByParent($exception, InvalidArgumentException::class, 'offsetGet')) {
                 throw new ContainerException(sprintf('Container error while retrieving "%s"', $id), null, $exception);
             } else {
                 throw $exception;

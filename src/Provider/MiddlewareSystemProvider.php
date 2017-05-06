@@ -3,7 +3,7 @@
 namespace Articstudio\Bitbucket\Provider;
 
 use Articstudio\Bitbucket\Provider\AbstractServiceProvider;
-use Pimple\Container;
+use Articstudio\Bitbucket\Container;
 use Articstudio\Bitbucket\Middleware\RequestParser;
 use Articstudio\Bitbucket\Middleware\RequestValidator;
 

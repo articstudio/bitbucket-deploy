@@ -3,7 +3,7 @@
 namespace Articstudio\Bitbucket\Middleware;
 
 use Articstudio\Bitbucket\ContainerAwareTrait;
-use Pimple\Container;
+use Articstudio\Bitbucket\Container;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Articstudio\Bitbucket\Collection;

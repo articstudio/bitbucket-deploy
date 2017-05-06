@@ -3,7 +3,7 @@
 namespace Articstudio\Bitbucket;
 
 use Articstudio\Bitbucket\Collection;
-use DomainException;
+use Articstudio\Bitbucket\Exception\Middleware\InvalidPayloadException;
 
 class Change extends Collection {
 
@@ -18,7 +18,7 @@ class Change extends Collection {
 
     public function validate() {
         if ($this->get('new')->isEmpty() || !$this->get('new')->has('type') || !$this->get('new')->has('name')) {
-            throw new DomainException('Incomplete payload push change');
+            throw new InvalidPayloadException('Incomplete payload push change');
         }
     }
 
