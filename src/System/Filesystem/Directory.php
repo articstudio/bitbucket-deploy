@@ -7,18 +7,18 @@ use RecursiveIteratorIterator;
 
 class Directory {
 
-    public static function Make($pathname, $mode = 0777, $recursive = false, $context = null) {
+    public static function Make($pathname, $mode = 0777, $recursive = false) {
         if (false !== file_exists($pathname)) {
             return false;
         }
-        return mkdir($pathname, $mode, $recursive, $context);
+        return mkdir($pathname, $mode, $recursive);
     }
 
-    public static function Remove($dirname, $context = null) {
+    public static function Remove($dirname) {
         if (false === file_exists($dirname)) {
             return false;
         }
-        return rmdir($dirname, $context);
+        return rmdir($dirname);
     }
 
     public static function RemoveRecursive($path) {
