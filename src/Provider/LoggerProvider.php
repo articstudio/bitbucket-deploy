@@ -3,7 +3,7 @@
 namespace Articstudio\Bitbucket\Provider;
 
 use Articstudio\Bitbucket\Provider\AbstractServiceProvider;
-use Pimple\Container;
+use Articstudio\Bitbucket\Container;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\ErrorLogHandler;

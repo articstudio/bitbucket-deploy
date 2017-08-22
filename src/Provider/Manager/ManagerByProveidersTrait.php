@@ -2,7 +2,7 @@
 
 namespace Articstudio\Bitbucket\Provider\Manager;
 
-use Pimple\Container;
+use Articstudio\Bitbucket\Container;
 use Articstudio\Bitbucket\Exception\Provider\NotFoundException;
 use Exception;
 use Throwable;

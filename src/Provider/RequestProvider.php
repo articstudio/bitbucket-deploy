@@ -3,7 +3,7 @@
 namespace Articstudio\Bitbucket\Provider;
 
 use Articstudio\Bitbucket\Provider\AbstractServiceProvider;
-use Pimple\Container;
+use Articstudio\Bitbucket\Container;
 use GuzzleHttp\Psr7\ServerRequest;
 use GuzzleHttp\Psr7\Stream;
 

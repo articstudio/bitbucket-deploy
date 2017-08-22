@@ -8,7 +8,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 use Articstudio\Bitbucket\Header;
 use Articstudio\Bitbucket\Payload;
-use DomainException;
+use Articstudio\Bitbucket\Exception\Middleware\WrongPayloadException;
 
 class RequestParser extends AbstractMiddleware {
 
@@ -43,7 +43,7 @@ class RequestParser extends AbstractMiddleware {
         if (!empty($json)) {
             $data = json_decode($json, self::ASSOCIATIVE, self::DEPTH, self::JSON_OPTIONS);
             if (json_last_error() !== JSON_ERROR_NONE) {
-                throw new DomainException(json_last_error_msg());
+                throw new WrongPayloadException(json_last_error_msg());
             }
         }
         return new Payload($data ?: []);

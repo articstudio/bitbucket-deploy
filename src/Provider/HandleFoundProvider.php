@@ -4,13 +4,13 @@ namespace Articstudio\Bitbucket\Provider;
 
 use Articstudio\Bitbucket\Provider\AbstractServiceProvider;
 use Articstudio\Bitbucket\Container;
-use Articstudio\Bitbucket\Middleware\Kernel;
+use Articstudio\Bitbucket\Handler\FoundHandler;
 
-class MiddlewareKernelProvider extends AbstractServiceProvider {
+class HandleFoundProvider extends AbstractServiceProvider {
 
     public function register(Container $container) {
-        $container['middle_kernel'] = function($c) {
-            return new Kernel($c);
+        $container['handleFound'] = function($c) {
+            return new FoundHandler($c);
         };
     }
 

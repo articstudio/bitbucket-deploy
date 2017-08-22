@@ -2,8 +2,9 @@
 
 namespace Articstudio\Bitbucket\Contract;
 
-use Pimple\ServiceProviderInterface;
+use Articstudio\Bitbucket\Container;
 
-interface ServiceProvider extends ServiceProviderInterface {
+interface ServiceProvider {
 
+    public function register(Container $container);
 }

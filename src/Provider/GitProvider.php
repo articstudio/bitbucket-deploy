@@ -3,7 +3,7 @@
 namespace Articstudio\Bitbucket\Provider;
 
 use Articstudio\Bitbucket\Provider\AbstractServiceProvider;
-use Pimple\Container;
+use Articstudio\Bitbucket\Container;
 use Articstudio\Bitbucket\System\Git;
 
 class GitProvider extends AbstractServiceProvider {
